@@ -1,0 +1,19 @@
+{
+ "manifest_version": 2,
+ "name": "Catify The Internet",
+ "description": "Change fonts to comic-sans, changes photos to kittens",
+ "version": "1",
+ "permissions": ["tabs", "http://*/*", "background"],
+ "background": {
+    "scripts": ["jquery.js", "inject.js"],
+    "persistent": false
+  },
+ "content_scripts": [
+    {
+      "matches": ["http://*/*"],
+      "css": ["inject.css"],
+      "js": ["jquery.js", "inject.js"]
+    }
+  ]
+}
+
